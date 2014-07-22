@@ -1,0 +1,8 @@
+exclude:
+- LICENSE.txt
+timezone: America/Chicago
+
+# https://help.github.com/articles/using-jekyll-with-pages#configuration-overrides
+lsi: false
+safe: true
+#source: .
