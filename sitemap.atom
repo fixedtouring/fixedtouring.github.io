@@ -6,17 +6,17 @@ layout: nil
 
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{ site.data.config.title | escape }}</title>
-  <link href="{{ site.data.config.url }}/sitemap.atom" rel="self"/>
-  <link href="{{ site.data.config.url }}"/>
+  <link href="{{ site.data.config.url | escape }}/sitemap.atom" rel="self"/>
+  <link href="{{ site.data.config.url | escape }}"/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
-  <id>{{ site.data.config.url }}</id>
+  <id>{{ site.data.config.url | escape }}</id>
 
   {% for post in site.posts %}
     <entry>
       <title>{{ post.title | escape }}</title>
-      <link href="{{ site.data.config.url }}{{ post.url }}"/>
+      <link href="{{ site.data.config.url | escape }}{{ post.url | escape }}"/>
       <updated>{{ post.date | date_to_xmlschema }}</updated>
-      <id>{{ site.data.config.url }}{{ post.url }}</id>
+      <id>{{ site.data.config.url | escape }}{{ post.url | escape }}</id>
       <content type="html">{{ post.content | escape }}</content>
     </entry>
   {% endfor %}
