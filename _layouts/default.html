@@ -4,11 +4,13 @@
   <head>
     <meta charset="utf-8">
 
-    <title>Fixed Touring</title>
+    <link href="{{ site.data.config.url }}{% if page.url != '/' %}{{ page.url }}{% endif %}" rel="canonical">
+
+    <title>{{ site.data.config.title | escape }}</title>
   </head>
 
   <body>
-    <h1>Fixed Touring</h1>
+    <h1>{{ site.data.config.title | escape }}</h1>
 
     {{ content }}
   </body>
