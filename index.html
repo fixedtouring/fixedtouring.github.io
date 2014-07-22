@@ -15,3 +15,11 @@ layout: default
     <i class="fa fa-twitter"></i> Follow Fixed Touring on Twitter
   </a>
 </div>
+
+<div class="list-group">
+  {% for post in site.posts %}
+    <a href="{{ post.url | escape }}" class="list-group-item">
+      {{ post.title | escape }}
+    </a>
+  {% endfor %}
+</div>
