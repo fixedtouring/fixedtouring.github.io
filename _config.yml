@@ -1,6 +1,6 @@
 exclude:
 - LICENSE.txt
-permalink: pretty
+permalink: /:categories/:title/
 timezone: America/Chicago
 
 # https://help.github.com/articles/using-jekyll-with-pages#configuration-overrides
