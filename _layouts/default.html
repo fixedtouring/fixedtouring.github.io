@@ -4,9 +4,11 @@
   <head>
     <meta charset="utf-8">
 
+    <title>{{ site.data.config.title | escape }}</title>
+
     <link href="{{ site.data.config.url }}{% if page.url != '/' %}{{ page.url }}{% endif %}" rel="canonical">
 
-    <title>{{ site.data.config.title | escape }}</title>
+    {% include apple.html %}
   </head>
 
   <body>
