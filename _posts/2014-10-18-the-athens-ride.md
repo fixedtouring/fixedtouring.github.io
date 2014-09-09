@@ -1,7 +1,7 @@
 ---
 category: rides
 layout: ride
-title: Athens
+title: The Athens Ride
 ---
 
 TBA
