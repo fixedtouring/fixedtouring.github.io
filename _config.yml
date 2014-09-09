@@ -1,6 +1,7 @@
 exclude:
 - LICENSE.txt
 - vendor/
+future: true
 markdown: kramdown
 permalink: /:categories/:title/
 timezone: America/Chicago
