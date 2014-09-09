@@ -19,6 +19,14 @@ layout: default
 <div class="list-group">
   {% for post in site.posts %}
     <a href="{{ post.url | escape }}" class="list-group-item">
+      <span class="badge">
+        {% if post.categories contains 'bikes' %}
+          <i class="fa fa-bicycle"></i>
+        {% elsif post.categories contains 'rides' %}
+          <i class="fa fa-map-marker"></i>
+        {% endif %}
+      </span>
+
       {{ post.title | escape }}
     </a>
   {% endfor %}
