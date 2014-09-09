@@ -20,13 +20,15 @@ layout: default
   {% for post in site.posts %}
     <a href="{{ post.url | escape }}" class="list-group-item">
       <h2>
-        {% if post.categories contains 'bikes' %}
-          <i class="fa fa-bicycle"></i>
-        {% elsif post.categories contains 'rides' %}
-          <i class="fa fa-map-marker"></i>
-        {% endif %}
-
         {{ post.title | escape }}
+
+        <small>
+          {% if post.categories contains 'bikes' %}
+            <i class="fa fa-bicycle"></i>
+          {% elsif post.categories contains 'rides' %}
+            <i class="fa fa-map-marker"></i>
+          {% endif %}
+        </small>
       </h2>
 
       <p>
