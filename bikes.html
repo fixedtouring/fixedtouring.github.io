@@ -1,0 +1,18 @@
+---
+layout: default
+permalink: /bikes/
+---
+
+<div class="page-header">
+  <h1>Bikes</h1>
+</div>
+
+<div class="list-group">
+  {% for post in site.posts %}
+    {% if post.categories contains 'bikes' %}
+      <a href="{{ post.url | escape }}" class="list-group-item">
+        {{ post.title | escape }}
+      </a>
+    {% endif %}
+  {% endfor %}
+</div>
