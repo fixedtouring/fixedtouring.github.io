@@ -32,9 +32,11 @@ layout: default
       </h2>
 
       <p>
-        <mark>
-          {{ post.date | date: '%Y-%m-%d' }}
-        </mark>
+        {% if post.categories contains 'rides' %}
+          <mark>
+            {{ post.date | date: '%Y-%m-%d' }}
+          </mark>
+        {% endif %}
 
         {{ post.content | split: '<!---->' | last | strip_html | strip_newlines | split: ' ' | join: ' ' | truncate: 200 }}
       </p>
