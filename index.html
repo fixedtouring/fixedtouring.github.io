@@ -8,60 +8,70 @@ layout: default
   <p>Ride Dallas.</p>
 </div>
 
-<h2>About</h2>
+<img alt="" class="center-block img-responsive img-rounded" src="/static/images/fixed-touring.jpg">
 
-<p class="lead">
-  Fixed Touring established in 2012 is a not for profit bicycle advocacy
-  organization. Fixed Touring provides unique opportunities for Dallas/Fort
-  Worth cyclists to increase bicycle skills, maintenance and route knowledge
-  across the state while decreasing the amount of gears.
-</p>
+<hr>
 
-<p>
-  The goal of Fixed Touring is to promote and showcase reliable, self
-  sufficient, and logical means to physical activity... 1 gear &amp; 1 bike at a
-  time. Comprised of five officers and two members from a variety of backgrounds
-  and professions, Fixed Touring is organized just as diverse as the areas we
-  seek to serve. Fixed Touring seeks to increase awareness of cycling and active
-  lifestyle events, promote community-wide physical fitness, and benefit
-  partnering companies/organizations. Fixed Touring’s strategy is to influence
-  participation in regular physical activity by associating it with sustainable
-  transportation, promoting cycling awareness, reaching physical activity
-  requirements, spending time with friends, having fun, and seeing the country
-  on two wheels. Fixed Touring will target riders/non-riders alike and a focus
-  will be placed on developing cycling communities, enhancing cycling awareness,
-  developing active transportation infrastructure and promoting community
-  cycling events. Fixed Touring seeks to improve citizen’s attitudes,
-  self-efficacy and perception through a person-oriented and community-driven
-  program, successfully implementing bicycle touring and transportation in
-  conjunction with the recently passed Dallas Bike Plan, local business funding
-  and community organization support.
-</p>
+<div class="row">
+  <div class="col-md-6">
+    <h2>About</h2>
 
-<div class="list-group">
-  {% for post in site.posts %}
-    <a href="{{ post.url | escape }}" class="list-group-item">
-      <h2>
-        {{ post.title | escape }}
+    <p class="lead">
+      Fixed Touring established in 2012 is a not for profit bicycle advocacy
+      organization. Fixed Touring provides unique opportunities for Dallas/Fort
+      Worth cyclists to increase bicycle skills, maintenance and route knowledge
+      across the state while decreasing the amount of gears.
+    </p>
 
-        <small>
-          {% if post.categories contains 'bikes' %}
-            <i class="fa fa-bicycle"></i>
-          {% elsif post.categories contains 'rides' %}
-            <i class="fa fa-map-marker"></i>
-          {% endif %}
-        </small>
-      </h2>
+    <p>
+      The goal of Fixed Touring is to promote and showcase reliable, self
+      sufficient, and logical means to physical activity... 1 gear &amp; 1 bike at a
+      time. Comprised of five officers and two members from a variety of backgrounds
+      and professions, Fixed Touring is organized just as diverse as the areas we
+      seek to serve. Fixed Touring seeks to increase awareness of cycling and active
+      lifestyle events, promote community-wide physical fitness, and benefit
+      partnering companies/organizations. Fixed Touring’s strategy is to influence
+      participation in regular physical activity by associating it with sustainable
+      transportation, promoting cycling awareness, reaching physical activity
+      requirements, spending time with friends, having fun, and seeing the country
+      on two wheels. Fixed Touring will target riders/non-riders alike and a focus
+      will be placed on developing cycling communities, enhancing cycling awareness,
+      developing active transportation infrastructure and promoting community
+      cycling events. Fixed Touring seeks to improve citizen’s attitudes,
+      self-efficacy and perception through a person-oriented and community-driven
+      program, successfully implementing bicycle touring and transportation in
+      conjunction with the recently passed Dallas Bike Plan, local business funding
+      and community organization support.
+    </p>
+  </div>
 
-      <p>
-        {% if post.categories contains 'rides' %}
-          <mark>
-            {{ post.date | date: '%Y-%m-%d' }}
-          </mark>
-        {% endif %}
+  <div class="col-md-6">
+    <div class="list-group">
+      {% for post in site.posts %}
+        <a href="{{ post.url | escape }}" class="list-group-item">
+          <h2>
+            {{ post.title | escape }}
 
-        {{ post.content | split: '<!---->' | last | strip_html | strip_newlines | split: ' ' | join: ' ' | truncate: 200 }}
-      </p>
-    </a>
-  {% endfor %}
+            <small>
+              {% if post.categories contains 'bikes' %}
+                <i class="fa fa-bicycle"></i>
+              {% elsif post.categories contains 'rides' %}
+                <i class="fa fa-map-marker"></i>
+              {% endif %}
+            </small>
+          </h2>
+
+          <p>
+            {% if post.categories contains 'rides' %}
+              <mark>
+                {{ post.date | date: '%Y-%m-%d' }}
+              </mark>
+            {% endif %}
+
+            {{ post.content | split: '<!---->' | last | strip_html | strip_newlines | split: ' ' | join: ' ' | truncate: 200 }}
+          </p>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
 </div>
