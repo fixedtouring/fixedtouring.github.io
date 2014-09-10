@@ -7,11 +7,11 @@ layout: default
 <!---->
 
 <div class="row">
-  <div class="col-md-4">
-    {{ content }}
+  <div class="col-md-8 col-md-push-4">
+    <img alt="" class="center-block img-responsive img-rounded" src="{{ page.image | escape }}">
   </div>
 
-  <div class="col-md-8">
-    <img alt="" class="center-block img-responsive img-rounded" src="{{ page.image | escape }}">
+  <div class="col-md-4 col-md-pull-8">
+    {{ content }}
   </div>
 </div>
