@@ -4,14 +4,18 @@ permalink: /bikes/
 ---
 
 <div class="page-header">
-  <h1>Bikes</h1>
+  <h1>Bikes <small><i class="fa fa-bicycle"></i></small></h1>
 </div>
 
 <div class="list-group">
   {% for post in site.posts %}
     {% if post.categories contains 'bikes' %}
       <a href="{{ post.url | escape }}" class="list-group-item">
-        {{ post.title | escape }}
+        <h2>{{ post.title | escape }}</h2>
+
+        <p>
+          {{ post.content | split: '<!---->' | last | strip_html | strip_newlines | split: ' ' | join: ' ' | truncate: 200 }}
+        </p>
       </a>
     {% endif %}
   {% endfor %}
