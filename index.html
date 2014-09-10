@@ -47,7 +47,9 @@ layout: default
 
   <div class="col-md-6">
     <div class="list-group">
-      {% for post in site.posts %}
+      <h2>News</h2>
+
+      {% for post in site.posts limit: 3 %}
         <a href="{{ post.url | escape }}" class="list-group-item">
           <h2>
             {{ post.title | escape }}
