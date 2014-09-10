@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>{{ site.data.config.title | escape }}</title>
+    <title>{% if page.title %}{{ page.title | escape }} &#xb7; {% endif %}{{ site.data.config.title | escape }}</title>
 
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
