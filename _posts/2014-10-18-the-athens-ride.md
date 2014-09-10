@@ -2,9 +2,8 @@
 category: rides
 layout: ride
 title: The Athens Ride
+image: /static/images/rides/the-athens-ride.png
 ---
-
-<img alt="" class="center-block img-responsive img-rounded" src="http://i.imgur.com/0xcVIeO.jpg">
 
 2 days. 180 miles. A weekend of bike riding and beer drinking from start to
 finish.

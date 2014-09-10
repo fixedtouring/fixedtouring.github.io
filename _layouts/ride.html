@@ -5,4 +5,13 @@ layout: default
 <h1>{{ page.title | escape }}</h1>
 
 <!---->
-{{ content }}
+
+<div class="row">
+  <div class="col-md-4">
+    {{ content }}
+  </div>
+
+  <div class="col-md-8">
+    <img alt="" class="center-block img-responsive img-rounded" src="{{ page.image | escape }}">
+  </div>
+</div>
